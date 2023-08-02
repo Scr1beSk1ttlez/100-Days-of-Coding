@@ -1,0 +1,7 @@
+height = input("enter your height in m: ")
+weight = input("enter your weight in kg: ")
+
+new_weight = float(weight) 
+new_height = float(height)
+
+print(int(new_weight/new_height ** 2))
