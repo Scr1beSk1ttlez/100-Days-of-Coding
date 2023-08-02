@@ -1,0 +1,11 @@
+
+two_digit_number = input("Type a two digit number: ")
+
+first_digit = two_digit_number[0]
+second_digit = two_digit_number[1]
+
+new_one_digit_number = int(first_digit)
+new_two_digit_number = int(second_digit)
+
+print(new_one_digit_number + new_two_digit_number)
+
