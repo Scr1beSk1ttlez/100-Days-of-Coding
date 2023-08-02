@@ -1,0 +1,55 @@
+
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+game = [rock, paper, scissors]
+
+move = input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. \n")
+
+ur_hand = int(move)
+cpu_hand = random.randint(0, 2)
+if ur_hand >= 3 or ur_hand < 0:
+  print("You typed an invalid number. You lose!")
+else:
+  print(f"{(game[ur_hand])}\nComputer chose:{(game[cpu_hand])}")
+  
+  if ur_hand == 0 and cpu_hand == 1:
+   print("You win")
+  elif ur_hand == 0 and cpu_hand == 2:
+   print("You lose")
+  elif ur_hand == 1 and cpu_hand == 2:
+    print("You lose")
+  elif ur_hand == 1 and cpu_hand == 0:
+   print("You win")
+  elif ur_hand == 2 and cpu_hand == 0:
+   print("You lose")
+  elif ur_hand == 2 and cpu_hand == 1:
+   print("You won")
+  else:
+   print("You tied")
